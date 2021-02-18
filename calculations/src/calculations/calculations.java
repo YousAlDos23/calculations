@@ -6,37 +6,89 @@ public class calculations {
 	public static void main(String[] args) {
 		 Scanner input = new Scanner(System.in);
 		  
-		    System.out.println("Enter number one");
-		    double num1 = input.nextDouble();
+		 System.out.println("For sum  enter 1");
+		 System.out.println("For sub  enter 2");
+		 System.out.println("For div  enter 3");
+		 System.out.println("For mul  enter 4");
+		 
+		 System.out.println("Enter your choice");
+		 
+		 int oper = input.nextInt();
+		 oper(oper);
+		       
+		  }
+	public static void oper(int x) {
+		
+		Scanner input = new Scanner(System.in);
+		
+		switch (x) {
+		
+		case 1:
+	        System.out.println("Enter number one");
+			    int int1 = input.nextInt();
+	    
+	        System.out.println("Enter number two");
+	            int int2 = input.nextInt();
+	            
+			math(int1 , int2);
+		    	break;
+			
+		
+		case 2:
+		   System.out.println("Enter number one");
+	           int int3 = input.nextInt();
+	    
+	       System.out.println("Enter number two");
+	           double dou1 = input.nextDouble();
+	           
+			math(int3 , dou1);
+			    break;
+		
+		
+		case 3:
+		   System.out.println("Enter number one");
+		       double dou2 = input.nextInt();
 		    
-		    System.out.println("Enter number two");
-		    double num2 = input.nextDouble();
-		    sum(num1 , num2);
-		    sub(num1 , num2);
-		    div(num1 , num2);
-		    mul(num1 , num2);
-		    
+		   System.out.println("Enter number two");
+		       double dou3 = input.nextInt();
+		       
+		   math(dou2 , dou3);
+				break;
+		
+		case 4:
+		   System.out.println("Enter number one");
+	          double dou4 = input.nextInt();
+	    
+	       System.out.println("Enter number two");
+	          int int4 = input.nextInt();
+	          
+			math(dou4 , int4);
+		}	
+} 
+    
+          public static void math(int x , int y) {
+  	
+			  int sum = x + y;
+			  System.out.println("The sum of " + x + " and " + y + " is: " + sum);
 		  }
 		  
-		  public static void sum(double x , double y) {
-			  double sum = x + y;
-			  System.out.println("The sum of " + " and " + y + " is: " + sum);
-		  }
-		  
-		  public static void sub(double x , double y) {
+		  public static void math(int x , double y) {
+			  
 			  double sub = x - y;
-			  System.out.println("The sub of " + " and " + y + " is: " + sub);
-		  
+			  System.out.println("The sub of " + x + " and " + y + " is: " + sub);
 		  
 		}
-		  public static double div(double x , double y) {
+		  public static double math(double x , double y) {
+			  
 			  double div = x / y;
-			  System.out.println("The div of " + " and " + y + " is: " + div);
+			  System.out.println("The div of " + x + " and " + y + " is: " + div);
 			  return div;
 		  }
 		  
-		  public static void mul(double x , double y) {
+		  public static double math(double x , int y) {
+			  
 			  double mul = x * y;
-			  System.out.println("The mul of " + " and " + y + " is: " + mul);
+			  System.out.println("The mul of " + x +  " and " + y + " is: " + mul);
+			  return mul;
 		  }
 	}
